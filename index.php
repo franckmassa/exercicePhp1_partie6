@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Exercice1</title>
+    <title>Exercice 1</title>
   </head>
   <body>
-  <?php
-  //Test des paramètres de l'url et afffichage des valeurs
-  if(isset($_GET['firstname']) && isset($_GET['lastname'])){
-    //Affichage des valeurs
-    echo  $_GET['firstname']. ' ' . $_GET['lastname'];
-  }
-   ?>
-</body>
+    <?php
+    //Affichage des paramètres de l'url
+    //$_GET = variable superGlobale
+    if(!empty($_GET['lastname']) && !empty($_GET['firstname'])){
+      echo $_GET['firstname'] . ' ' . $_GET['lastname'];
+    } else {
+        echo 'Veuillez vérifier les paramètres d\'url';
+    }
+    ?>
+  </body>
 </html>
